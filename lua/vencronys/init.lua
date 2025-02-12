@@ -1,10 +1,10 @@
-require("voren.set")
-require("voren.remap")
-require("voren.lazy_init")
+require("vencronys.set")
+require("vencronys.remap")
+require("vencronys.lazy_init")
 
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('Voren', {})
+local VencronysGroup = augroup('Vencronys', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -31,13 +31,13 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = VorenGroup,
+    group = VencronysGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
 
 -- autocmd('BufEnter', {
---     group = VorenGroup,
+--     group = VencronysGroup,
 --     callback = function()
 --         if vim.bo.filetype == "zig" then
 --             vim.cmd.colorscheme("tokyonight-night")

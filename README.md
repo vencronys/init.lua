@@ -1,4 +1,4 @@
-### Voren's Neovim's config
+### Vencronys's Neovim's config
 
 Prerequisite: install
 * [ripgrep](https://github.com/BurntSushi/ripgrep).
