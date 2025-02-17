@@ -49,7 +49,7 @@ autocmd({"BufWritePre"}, {
 
 
 autocmd('LspAttach', {
-    group = ThePrimeagenGroup,
+    group = VencronysGroup,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -64,6 +64,27 @@ autocmd('LspAttach', {
         vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     end
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown", "txt", "env" },
+	callback = function(opts)
+		local cmp = require("cmp")
+		cmp.setup.buffer({ enabled = false })
+		-- have to "re-enable" spellchecking for these files
+		vim.opt.spelllang = "en_us"
+		vim.opt.spell = true
+	end,
+})
+
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
+
+vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_view_forward_search_on_start = false
+vim.g.vimtex_compiler_latexmk = {
+    aux_dir = "~/.texfiles",
+    out_dir = "~/.texfiles",
+}
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
