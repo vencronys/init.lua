@@ -21,9 +21,9 @@ return {
 
         -- Key mappings for navigating Harpoon marks
         vim.keymap.set("n", "<C-h>", function() harpoon_ui.nav_file(1) end, { desc = "Go to Harpoon mark 1" })
-        vim.keymap.set("n", "<C-t>", function() harpoon_ui.nav_file(2) end, { desc = "Go to Harpoon mark 2" })
-        vim.keymap.set("n", "<C-n>", function() harpoon_ui.nav_file(3) end, { desc = "Go to Harpoon mark 3" })
-        vim.keymap.set("n", "<C-s>", function() harpoon_ui.nav_file(4) end, { desc = "Go to Harpoon mark 4" })
+        vim.keymap.set("n", "<C-j>", function() harpoon_ui.nav_file(2) end, { desc = "Go to Harpoon mark 2" })
+        vim.keymap.set("n", "<C-k>", function() harpoon_ui.nav_file(3) end, { desc = "Go to Harpoon mark 3" })
+        vim.keymap.set("n", "<C-l>", function() harpoon_ui.nav_file(4) end, { desc = "Go to Harpoon mark 4" })
 
         -- Key mappings for replacing marks at specific positions
         local function replace_mark_at(index)
