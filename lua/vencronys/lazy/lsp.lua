@@ -33,8 +33,16 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "clangd",
-                -- "rust_analyzer",
-                -- "gopls",
+                "rust_analyzer",
+                "gopls",
+                "pyright",
+                "ts_ls",
+                "html",
+                "cssls",
+                "tailwindcss",
+                "emmet_ls",  -- Fast HTML/CSS snippets
+                "jsonls",    -- JSON language server
+                -- "lua-language-server",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
