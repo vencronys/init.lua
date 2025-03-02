@@ -29,3 +29,6 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+-- vim.cmd("highlight SpellBad cterm=undercurl gui=undercurl guisp=Red")
+vim.cmd("highlight DiagnosticUnderlineError gui=undercurl guisp=Red")

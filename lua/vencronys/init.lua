@@ -77,7 +77,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+vim.opt.spell = false
 
 vim.g.vimtex_view_method = 'zathura'
 vim.g.vimtex_view_forward_search_on_start = false
