@@ -30,5 +30,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+vim.o.conceallevel = 1  -- You can also set this to 2
+
 -- vim.cmd("highlight SpellBad cterm=undercurl gui=undercurl guisp=Red")
 vim.cmd("highlight DiagnosticUnderlineError gui=undercurl guisp=Red")
